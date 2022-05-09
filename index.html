@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript CRUD Example Tutorial</title>
+        <link rel="stylesheet" href="./styles/styles.css" />
+    </head>
+    <body>
+        <div class="employee-form">
+            <h1>Book Store</h1>
+
+            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                <div>
+                    <label class="validation-error hide" id="book_idValidationError">This field is required.</label>
+                    <input type="number" name="book_id" placeholder="Book Id" id="book_id" />
+                </div>
+                <div>
+                    <input type="text" name="book_name" placeholder="Book name" id="book_name" />
+                </div>
+                <div>
+                    <input type="number" name="quantity" placeholder="Quantity" id="quantity" />
+                </div>
+                <div>
+                    <input type="number" name="price" placeholder="Price" id="price" />
+                </div>
+                <div class="form-action-buttons">
+                    <input type="submit" value="Submit" />
+                    <input type="submit" value="reset" />
+                </div>
+            </form>
+        </div>
+        <br />
+        <div class="employees-table">
+            <table class="list" id="employeeList">
+                <thead>
+                    <tr>
+                        <th>Book id</th>
+                        <th>Book name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Edit /Delete</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
